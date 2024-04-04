@@ -5,7 +5,7 @@ This repository shows the material used in the article "Nonparametric SPC: solvi
 Package available at: https://github.com/CER-UFBA/npSPC or Installing in R-software as:
 > remotes::install_github('CER-UFBA/npSPC')
 
-It contains 12 different functions for signs or signed-ranks nonparametric control charts (Shewhart, CuSum, and EWMA); six of them are related to the case of known in-control parameters and another six to the case of unknown parameters. Here called the function considering the known parameter of the specified tolerant interval, Case K, and
+It contains 12 different functions for signs or signed-ranks nonparametric control charts (Shewhart, CuSum, and EWMA); six of them are related to the case of known in-control parameters and another six to the case of unknown parameters. Here called the functions considering the known parameter of the specified tolerant interval, Case K, and
 unknown parameter of in-control, Case U.
 
 | Command | Description |
@@ -23,4 +23,4 @@ unknown parameter of in-control, Case U.
 | `cusum_ex` | Cumulative Sum based on exceedance statistic |
 | `cusum_wr` | Cumulative Sum based on Wilcoxon rank-sum statistic |
 | `ewma_ex` | Exponentially Weighted Moving Average based on exceedance statistic |
-| `ewma\_wr` | Exponentially Weighted Moving Average based on Wilcoxon rank-sum statistic |
+| `ewma_wr` | Exponentially Weighted Moving Average based on Wilcoxon rank-sum statistic |
