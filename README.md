@@ -6,3 +6,20 @@ Package available at: https://github.com/CER-UFBA/npSPC or Installing in R-softw
 > remotes::install_github('CER-UFBA/npSPC')
 
 It contains 12 different functions for signs or signed-ranks nonparametric control charts (Shewhart, CuSum, and EWMA); six of them are related to the case of known in-control parameters and another six to the case of unknown parameters.
+
+| Command | Description |
+| --- | --- |
+| **Case K** | --- |
+| `shewhart_sn` | Shewhart based on signs                                    
+| `shewhart_sr` | Shewhart based on signed-ranks |
+| `cusum_sn` | Cumulative Sum based on signs |
+| `cusum_sr` | Cumulative Sum based on signed-ranks |
+| `ewma_sn` | Exponentially Weighted Moving Average based on signs |
+| `ewma_sr` | Exponentially Weighted Moving Average based on signed-ranks |
+| **Case U** | --- |
+| `shewhart_prec` | Shewhart based on precedence statistic |
+| `shewhart_mw` | Shewhart based on Mann-Whitney statistic |
+| `cusum_ex` | Cumulative Sum based on exceedance statistic |
+| `cusum_wr` | Cumulative Sum based on Wilcoxon rank-sum statistic |
+| `ewma_ex` | Exponentially Weighted Moving Average based on exceedance statistic |
+| `ewma\_wr` | Exponentially Weighted Moving Average based on Wilcoxon rank-sum statistic |
