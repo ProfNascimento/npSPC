@@ -132,6 +132,9 @@ names(data_long)
 
 unique(paste(data_long$Type,data_long$ID,sep="."))
 
+tapply(as.factor(data_long$Y[data_long$Type=="TDF"]),data_long$Year[data_long$Type=="TDF"],summary)
+tapply(as.factor(data_long$Y[data_long$Type=="TDF / SM "]),data_long$Year[data_long$Type=="TDF / SM "],summary)
+
 summary(as.factor(data_long$Removed[data_long$Type=="TDF"]))
 summary(as.factor(data_long$Removed[data_long$Type=="TDF / SM "]))
 
