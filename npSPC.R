@@ -198,26 +198,24 @@ ewma(DB.d1,center=0)
 ewma(DB.d2,center=0)
 
 ## Nonparametric SPC (CASE K)
+# SHEWHART-SN
+shewhart_sn(DB.d1, med=0, group_by_col = TRUE)
+shewhart_sn(DB.d2, med=0, group_by_col = TRUE)
+# EWMA-SN
 ewma_sn(DB.d1, group_by_col = TRUE,med = 0)
 ewma_sn(DB.d2, group_by_col = TRUE,med = 0)
 # CUSUM-SN
 cusum_sn(DB.d1,group_by_col = TRUE, med=0)
 cusum_sn(DB.d2,group_by_col = TRUE, med=0)
-# SHEWHART-SN
-shewhart_sn(DB.d1, med=0, group_by_col = TRUE)
-shewhart_sn(DB.d2, med=0, group_by_col = TRUE)
 
 ## Nonparametric SPC (CASE U)
+# CUSUM NOT INDICATED GIVEN THE LAST YEAR PATTERN SHIFTING THE MEAN & MEDIAN
+# IF THE CUSUM IS NOT INDICATED THEN SHEWHART WILL NOT BE 
+# UNKNOWN PARAMETER CASE USES THE NOT-REMOVED ITEM AS REFERENCE
 d11.TDF = data_long[data_long$Removed!="1" & data_long$Type=="TDF / SM ",c(2,4,5)]
 DB.d11 = qcc.groups(data=d11.TDF$Y,d11.TDF$Time)
-
 ewma_wr(DB.d11,DB.d1, group_by_col = TRUE)
-cusum_wr(DB.d11,DB.d1, group_by_col = TRUE, side = "upper")
-shewhart_mw(DB.d11,DB.d1, group_by_col = TRUE)
 
 d21.TDF = data_long[data_long$Removed!="1" & data_long$Type=="TDF",c(2,4,5)]
 DB.d21 = qcc.groups(data=d21.TDF$Y,d21.TDF$Time)
-
 ewma_wr(DB.d21,DB.d2, group_by_col = TRUE)
-cusum_wr(DB.d21,DB.d2, group_by_col = TRUE, side = "upper")
-shewhart_mw(DB.d21,DB.d2, group_by_col = TRUE)
